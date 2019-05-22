@@ -3,10 +3,10 @@ import firebase from '@firebase/app'
 import '@firebase/firestore'
 import '@firebase/storage'
 import './Views.css'
-import GoogleAds from './../Media/Google-Ads.png'
+import GoogleAd from './../Components/GoogleAd.js'
 
 class EurUsd extends React.Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       sorting: 'bank_eurusd_rate',
@@ -18,14 +18,14 @@ class EurUsd extends React.Component {
   handleChange = (event) => this.setState({ sorting: event.target.value })
   handleScroll = () => {
 
-      document.body.scrollTop > 200 ||
+    document.body.scrollTop > 200 ||
       document.documentElement.scrollTop > 200 ? this.setState({
         isSticky: 'isfixed',
       }) :
       this.setState({ isSticky: '' })
   }
 
-  async getData () {
+  async getData() {
     const db = firebase.firestore()
     await db
       .collection('fxt_bank')
@@ -46,18 +46,18 @@ class EurUsd extends React.Component {
       )
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getData()
     window.addEventListener('scroll', this.handleScroll)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  render () {
+  render() {
     const bankRate = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_eurusd_rate) > parseFloat(b.bank_eurusd_rate)) {
           return 1
         } else if (
@@ -109,7 +109,7 @@ class EurUsd extends React.Component {
         )
       })
     const bankSell = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_eurusd_sell) > parseFloat(b.bank_eurusd_sell)) {
           return 1
         } else if (
@@ -161,7 +161,7 @@ class EurUsd extends React.Component {
         )
       })
     const bankBuy = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_eurusd_buy) > parseFloat(b.bank_eurusd_buy)) {
           return 1
         } else if (
@@ -227,14 +227,15 @@ class EurUsd extends React.Component {
           </select>
         </div>
         <div className='wrapper_ads'>
-          <img src={GoogleAds} alt='Google Ads' />
+          {/* forextakip-320x100 */}
+          <GoogleAd />
         </div>
         <div className='wrapper_content bank_list'>
           {
             this.state.sorting === 'bank_eurusd_rate' ? bankRate :
-            this.state.sorting === 'bank_eurusd_sell' ? bankSell :
-            this.state.sorting === 'bank_eurusd_buy' ? bankBuy :
-            'Tekrar Deneyiniz'}
+              this.state.sorting === 'bank_eurusd_sell' ? bankSell :
+                this.state.sorting === 'bank_eurusd_buy' ? bankBuy :
+                  'Tekrar Deneyiniz'}
         </div>
       </div>
     )

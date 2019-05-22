@@ -3,10 +3,10 @@ import firebase from '@firebase/app'
 import '@firebase/firestore'
 import '@firebase/storage'
 import './Views.css'
-import GoogleAds from './../Media/Google-Ads.png'
+import GoogleAd from './../Components/GoogleAd.js'
 
 class GauTry extends React.Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       sorting: 'bank_gau_rate',
@@ -18,14 +18,14 @@ class GauTry extends React.Component {
   handleChange = (event) => this.setState({ sorting: event.target.value })
   handleScroll = () => {
 
-      document.body.scrollTop > 200 ||
+    document.body.scrollTop > 200 ||
       document.documentElement.scrollTop > 200 ? this.setState({
         isSticky: 'isfixed',
       }) :
       this.setState({ isSticky: '' })
   }
 
-  async getData () {
+  async getData() {
     const db = firebase.firestore()
     await db.collection('fxt_bank').where('bank_gau_rate', '>', '0').onSnapshot(
       (snapshot) => {
@@ -43,18 +43,18 @@ class GauTry extends React.Component {
     )
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getData()
     window.addEventListener('scroll', this.handleScroll)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  render () {
+  render() {
     const bankRate = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_gau_rate) > parseFloat(b.bank_gau_rate)) {
           return 1
         } else if (parseFloat(a.bank_gau_rate) < parseFloat(b.bank_gau_rate)) {
@@ -104,7 +104,7 @@ class GauTry extends React.Component {
         )
       })
     const bankSell = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_gau_sell) > parseFloat(b.bank_gau_sell)) {
           return 1
         } else if (parseFloat(a.bank_gau_sell) < parseFloat(b.bank_gau_sell)) {
@@ -154,7 +154,7 @@ class GauTry extends React.Component {
         )
       })
     const bankBuy = this.state.allData
-      .sort(function (a, b){
+      .sort(function (a, b) {
         if (parseFloat(a.bank_gau_buy) > parseFloat(b.bank_gau_buy)) {
           return 1
         } else if (parseFloat(a.bank_gau_buy) < parseFloat(b.bank_gau_buy)) {
@@ -218,14 +218,15 @@ class GauTry extends React.Component {
           </select>
         </div>
         <div className='wrapper_ads'>
-          <img src={GoogleAds} alt='Google Ads' />
+          {/* forextakip-320x100 */}
+          <GoogleAd />
         </div>
         <div className='wrapper_content bank_list'>
           {
             this.state.sorting === 'bank_gau_rate' ? bankRate :
-            this.state.sorting === 'bank_gau_sell' ? bankSell :
-            this.state.sorting === 'bank_gau_buy' ? bankBuy :
-            'Tekrar Deneyiniz'}
+              this.state.sorting === 'bank_gau_sell' ? bankSell :
+                this.state.sorting === 'bank_gau_buy' ? bankBuy :
+                  'Tekrar Deneyiniz'}
         </div>
       </div>
     )
