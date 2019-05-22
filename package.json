@@ -1,0 +1,38 @@
+{
+  "name": "forextakip-spa",
+  "version": "1.0.0",
+  "description": "Forex Takip Web Application",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "@hmtkyn",
+  "license": "GPL-3",
+  "dependencies": {
+    "@firebase/firestore": "^1.2.2",
+    "firebase": "^5.11.0",
+    "firebase-admin": "^7.3.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 5 chrome version",
+      "last 5 firefox version",
+      "last 5 safari version"
+    ]
+  }
+}

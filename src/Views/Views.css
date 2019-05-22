@@ -1,0 +1,123 @@
+.bank_list__item {
+  padding: 0;
+  margin: 1.6rem;
+  border-radius: 0.4rem;
+  background-color: #efefef;
+  overflow: hidden;
+  height: 9.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.bank_list__rank {
+  width: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 1.2rem 0 1.2rem 1.2rem;
+  text-align: center;
+}
+.bank_list__media {
+  overflow: hidden;
+  border-radius: 0.4rem;
+  padding: 0;
+  margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bank_list__media--img {
+  background-color: #f5f5f5;
+  width: 7.4rem;
+}
+.bank_list__content {
+  height: 7.4rem;
+  min-width: 18rem;
+  width: calc(100% - 160px);
+  padding: 0;
+  margin: 1.2rem 1.2rem 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.bank_list__name {
+  font-size: 1.8rem;
+}
+.bank_list__exchange {
+  font-size: 1.8rem;
+}
+.bank_list__content--top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.bank_list__content--bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+}
+.bank_list__buy--lbl {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.bank_list__buy--val {
+  color: #000;
+  font-size: 1.4rem;
+}
+.wrapper {
+  padding-bottom: 4.8rem;
+}
+.wrapper_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 1.2rem;
+  margin: 0;
+}
+.wrapper_header > h3 {
+  font-size: 2.4rem;
+  letter-spacing: -0.1rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+.wrapper_header > select {
+  color: #1f8ee7;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+}
+.wrapper_header.isfixed {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.wrapper_ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.wrapper_ads > img {
+  padding: 0;
+  margin: 0;
+}
