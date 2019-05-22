@@ -1,7 +1,7 @@
 {
   "short_name": "Forex Takip",
   "name": "Bankaların Döviz Kurlarını Anlık Takip Et",
-  "description": "Bankaların Kurlarını Anlık Takip Eden Ücretsiz Web Uygulaması",
+  "description": "Bankaların Döviz Kurlarını Anlık Takip Eden Uygulama",
   "icons": [
     {
       "src": "./favicon/favicon32.png",
