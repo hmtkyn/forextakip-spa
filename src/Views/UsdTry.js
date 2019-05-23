@@ -181,7 +181,7 @@ class UsdTry extends React.Component {
             <div className='bank_list__content'>
               <div className='bank_list__content--top'>
                 <div className='bank_list__name'>{val.bank_name}</div>
-                <div className='bank_list__exchange'>EUR</div>
+                <div className='bank_list__exchange'>USD</div>
               </div>
               <div className='bank_list__content--bottom'>
                 <div className='bank_list__buy'>
