@@ -3,7 +3,6 @@ import firebase from '@firebase/app'
 import '@firebase/firestore'
 import '@firebase/storage'
 import './Views.css'
-import GoogleAd from './../Components/GoogleAd.js'
 
 class GauTry extends React.Component {
   constructor() {
@@ -216,10 +215,6 @@ class GauTry extends React.Component {
             <option value='bank_gau_sell'>Satış - Artan</option>
             <option value='bank_gau_buy'>Alış - Artan</option>
           </select>
-        </div>
-        <div className='wrapper_ads'>
-          {/* forextakip-320x100 */}
-          <GoogleAd />
         </div>
         <div className='wrapper_content bank_list'>
           {
