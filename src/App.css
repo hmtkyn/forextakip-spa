@@ -15,6 +15,7 @@ body {
   scroll-behavior: smooth;
   touch-action: manipulation;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 code {
