@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Roboto&subset=latin-ext');
 html {
   min-height: 100vh;
+  font-size: 10px;
   background-color: #fff;
   color: #000;
   margin: 0;
