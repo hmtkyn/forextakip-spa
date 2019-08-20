@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import firebase from '@firebase/app'
 import { BrowserRouter as Switch, Route } from 'react-router-dom'
 import './App.css'
@@ -9,7 +9,7 @@ import EurTry from './Views/EurTry'
 import EurUsd from './Views/EurUsd'
 import GauTry from './Views/GauTry'
 
-function App (){
+function App() {
   if (!firebase.apps.length) {
     firebase.initializeApp({
       apiKey: 'AIzaSyDaDTyar5_65FEYe5vyhNp6_URutgUt6uY',
@@ -21,7 +21,7 @@ function App (){
     })
   }
   return (
-    <div className='app'>
+    <Fragment>
       <Switch>
         <Header />
         <Route exact path='/' component={UsdTry} />
@@ -30,7 +30,7 @@ function App (){
         <Route path='/gau-try' component={GauTry} />
         <Footer />
       </Switch>
-    </div>
+    </Fragment>
   )
 }
 
