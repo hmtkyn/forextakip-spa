@@ -207,7 +207,7 @@ class UsdTry extends React.Component {
         )
       })
     return (
-      <div className='wrapper'>
+      <main className='wrapper'>
         <div className={'wrapper_header ' + this.state.isSticky}>
           <h3>USD/TRY - Bankalar</h3>
           <select
@@ -227,7 +227,7 @@ class UsdTry extends React.Component {
                 this.state.sorting === 'bank_usd_buy' ? bankBuy :
                   'Tekrar Deneyiniz'}
         </div>
-      </div>
+      </main>
     )
   }
 }

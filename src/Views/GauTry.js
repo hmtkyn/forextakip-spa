@@ -203,7 +203,7 @@ class GauTry extends React.Component {
         )
       })
     return (
-      <div className='wrapper'>
+      <main className='wrapper'>
         <div className={'wrapper_header ' + this.state.isSticky}>
           <h3>GAU/TRY - Bankalar</h3>
           <select
@@ -223,7 +223,7 @@ class GauTry extends React.Component {
                 this.state.sorting === 'bank_gau_buy' ? bankBuy :
                   'Tekrar Deneyiniz'}
         </div>
-      </div>
+      </main>
     )
   }
 }

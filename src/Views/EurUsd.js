@@ -212,7 +212,7 @@ class EurUsd extends React.Component {
         )
       })
     return (
-      <div className='wrapper'>
+      <main className='wrapper'>
         <div className='wrapper_header'>
           <h3>EUR/USD - Bankalar</h3>
           <select
@@ -232,7 +232,7 @@ class EurUsd extends React.Component {
                 this.state.sorting === 'bank_eurusd_buy' ? bankBuy :
                   'Tekrar Deneyiniz'}
         </div>
-      </div>
+      </main>
     )
   }
 }
